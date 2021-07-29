@@ -1,0 +1,75 @@
+<!-- <div class="sidenav">
+    <div class="login-main-text">
+       <h2 class="font-weight-bold font-italic">BankData</h2>
+       <img src="../../assets/images/bankdata.jpg">
+    </div>
+ </div>
+ <div class="main">
+    <div class="col-md-6 col-sm-12">
+       <div class="login-form">
+          <form  #loginForm ="ngForm" (ngSubmit) = "login()">
+            <small class="text-danger">{{errorMsg}}</small>
+            <div class="form-group">
+                <label>User Name</label>
+                <input type="text" class="form-control" name="username" placeholder="User Name" [(ngModel)] = "user.username"
+                    required #username="ngModel" [class.is-invalid]="username.invalid && username.touched">
+                <small class="text-danger" [class.d-none] = "username.valid || username.untouched">User name is required</small>
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" class="form-control" name="password" placeholder="Password"
+                    [(ngModel)]="user.password">
+            </div>
+            <button type="submit" class="btn btn-black">Login</button>
+          </form>
+       </div>
+    </div>
+ </div> -->
+
+ <div class="container h-100">
+   <div class="d-flex justify-content-center h-100">
+      <div class="user_card">
+         <div class="d-flex justify-content-center">
+            <div class="brand_logo_container">
+               <img src="../../assets/images/bankdata.jpg" class="brand_logo" alt="Logo">
+            </div>
+         </div>
+         <div class="d-flex justify-content-center form_container">
+            <form #loginForm ="ngForm" (ngSubmit) = "login()">
+               <small class="text-danger">{{errorMsg}}</small>
+               <div class="input-group mb-3">
+                  <div class="input-group-append">
+                     <span class="input-group-text"><i class="fa fa-user"></i></span>
+                  </div>
+                  <input type="text" name="username" class="form-control input_user" placeholder="username" [(ngModel)] = "user.username"
+                     required #username="ngModel" [class.is-invalid]="username.invalid && username.touched">
+               </div>
+               <div class="input-group mb-2">
+                  <div class="input-group-append">
+                     <span class="input-group-text"><i class="fa fa-lock"></i></span>
+                  </div>
+                  <input type="password" name="password" class="form-control input_pass" placeholder="password" [(ngModel)]="user.password">
+               </div>
+               <!-- <div class="form-group">
+                  <div class="custom-control custom-checkbox">
+                     <input type="checkbox" class="custom-control-input" id="customControlInline">
+                     <label class="custom-control-label" for="customControlInline">Remember me</label>
+                  </div>
+               </div> -->
+                  <div class="d-flex justify-content-center mt-3 login_container">
+             <button type="submit" name="button" class="btn login_btn">Login</button>
+            </div>
+            </form>
+         </div>
+   
+         <!-- <div class="mt-4">
+            <div class="d-flex justify-content-center links">
+               Don't have an account? <a href="#" class="ml-2">Sign Up</a>
+            </div>
+            <div class="d-flex justify-content-center links">
+               <a href="#">Forgot your password?</a>
+            </div>
+         </div> -->
+      </div>
+   </div>
+</div>
